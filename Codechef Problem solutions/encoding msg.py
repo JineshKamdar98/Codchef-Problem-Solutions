@@ -1,0 +1,12 @@
+t=int(input())
+while(t!=0):
+    n=int(input())
+    s=input()
+    i=0
+    while(i!=n):
+        t=s[i]
+        s[i]=s[i+1]
+        s[i+1]=t
+        i+=2
+    print(s)
+    t=t-1

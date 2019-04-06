@@ -1,0 +1,34 @@
+t=int(input())
+n=t
+runs=[]
+wckts=[]
+while(t!=0):
+    r,w=input().split()
+    r,w=[int(r),int(w)]
+    runs.append(r)
+    wckts.append(w)
+    t=t-1
+f=0
+for i in range(0,n):
+    if((i+1)!=n):
+        if(runs[i]>runs[i+1]):
+            f=1
+        if(wckts[i]>wckts[i+1]):
+            f=1
+        if(wckts[i]>10):
+            f=1
+        if(wckts[i]==10):
+            if(wckts[i-1]==10):
+                f=1
+    else:
+        if(wckts[i]>10):
+            f=1
+        if(wckts[i]==10):
+            if(wckts[i-1]==10):
+                f=1
+        break
+if(f==0):
+    print('YES')
+else:
+    print('NO')
+        
